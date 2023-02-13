@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% if code %}
+<h1>{{ code.title }}</h1>
+<pre><code class="{{ code.language }}">{{ code.code }}</code></pre>
+<p>Langage : {{ code.language }}</p>
+{% else %}
+<p>{{ message }}</p>
+{% endif %}
+
+{% endblock %}
